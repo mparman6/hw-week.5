@@ -1,20 +1,2 @@
-.carouselImg{
-  width: 100%;
-  height: 500;
-  max-height: 500px;
-}
-
-.citiesCarousel{
-  margin-top: 100px;
-}
-
-.panelColumn{
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  z-index: 100;
-}
-
-#searchPanelHeading{
-  background-color: #2777E8;
-}
+@import url("carousel.css");
+@import url("searchPanel.css");
