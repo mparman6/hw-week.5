@@ -1,0 +1,22 @@
+.panelColumn{
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 100;
+}
+
+#searchPanelHeading{
+  background-color: #2777E8;
+}
+
+#cityInput{
+  width: 227px;
+}
+
+#checkInInput{
+  width: 163px;
+}
+
+.searchInput{
+  margin-left: 10px;
+}
