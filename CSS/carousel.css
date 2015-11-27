@@ -7,4 +7,5 @@
 .citiesCarousel{
   margin-top: 200px;
   margin-bottom: 50px;
+  z-index: -100;
 }
