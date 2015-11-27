@@ -1,0 +1,9 @@
+.carouselImg{
+  width: 100%;
+  height: 500;
+  max-height: 500px;
+}
+
+#carousel-example-generic{
+  margin-top: 100px;
+}
