@@ -1,0 +1,19 @@
+#heading {
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 130px;
+}
+
+.navbar-brand {
+  padding:0;
+  width: 172px;
+  height: 100px;
+}
+
+.navbar-default{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  z-index: 100;
+}
