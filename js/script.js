@@ -41,16 +41,16 @@ $(document).ready(function(){
     else if(checkOutDate === ""){
       $(".noCheckOutAlert").slideDown();
     }
-    else if(city === "new york city, ny"){
+    else if(city === "new york city, ny" || "nyc" || "new york" || "new york city"){
       $(".containerNewYorkCity").show();
     }
-    else if(city === "san francisco, ca"){
+    else if(city === "san francisco, ca" || "san francisco"){
       $(".containerSanFrancisco").show();
     }
-    else if(city === "denver, co"){
+    else if(city === "denver, co" || "denver"){
       $(".containerDenver").show();
     }
-    else if(city === "boston, ma"){
+    else if(city === "boston, ma" || "boston"){
       $(".containerBoston").show();
     }
     else{
