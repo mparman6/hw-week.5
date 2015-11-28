@@ -1,6 +1,8 @@
 $(document).ready(function(){
   $(".searchPanel").hide();
   $(".searchResultsContainer").hide();
+  $("#checkInInput").pickadate()
+  $("#checkOutInput").pickadate()
   $(".carouselCity").on("click", function(){
     $(this).parent().parent().parent().hide();
     $(".searchPanel").show();
