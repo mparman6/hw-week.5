@@ -21,6 +21,8 @@ $(document).ready(function(){
     }
   });
   $(".searchBtn").on("click", function(){
+    if($("#cityInput").val() === "New York City, NY"){
     $(".searchResultsContainer").show();
+  }
   })
 });
