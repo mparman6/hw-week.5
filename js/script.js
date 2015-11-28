@@ -29,22 +29,28 @@ $(document).ready(function(){
     $(".containerSanFrancisco").hide();
     $(".containerDenver").hide();
     $(".containerBoston").hide();
-    if($("#checkInInput").val() === ""){
+    var checkInDate = $("#checkInInput").val();
+    var checkOutDate = $("#checkOutInput").val();
+    var city = $("#cityInput").val().toLowerCase().trim();
+    if(checkInDate === "" && checkOutDate === ""){
+      $(".noCheckInOrOutAlert").slideDown();
+    }
+    else if(checkInDate === ""){
       $(".noCheckInAlert").slideDown();
     }
-    else if($("#checkOutInput").val() === ""){
+    else if(checkOutDate === ""){
       $(".noCheckOutAlert").slideDown();
     }
-    else if($("#cityInput").val().toLowerCase().trim() === "new york city, ny"){
+    else if(city === "new york city, ny"){
       $(".containerNewYorkCity").show();
     }
-    else if($("#cityInput").val().toLowerCase().trim() === "san francisco, ca"){
+    else if(city === "san francisco, ca"){
       $(".containerSanFrancisco").show();
     }
-    else if($("#cityInput").val().toLowerCase().trim() === "denver, co"){
+    else if(city === "denver, co"){
       $(".containerDenver").show();
     }
-    else if($("#cityInput").val().toLowerCase().trim() === "boston, ma"){
+    else if(city === "boston, ma"){
       $(".containerBoston").show();
     }
     else{
