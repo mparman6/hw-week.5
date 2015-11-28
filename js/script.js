@@ -22,25 +22,33 @@ $(document).ready(function(){
     }
   });
   $(".searchBtn").on("click", function(){
+    console.log($("#checkInInput").val());
+    console.log($("#checkOutInput").val());
     $(".alert-danger").hide();
     $(".containerNewYorkCity").hide();
     $(".containerSanFrancisco").hide();
     $(".containerDenver").hide();
     $(".containerBoston").hide();
-    if($("#cityInput").val().toLowerCase().trim() === "new york city, ny"){
+    if($("#checkInInput").val() === ""){
+      $(".noCheckInAlert").slideDown();
+    }
+    else if($("#checkOutInput").val() === ""){
+      $(".noCheckOutAlert").slideDown();
+    }
+    else if($("#cityInput").val().toLowerCase().trim() === "new york city, ny"){
       $(".containerNewYorkCity").show();
-      }
+    }
     else if($("#cityInput").val().toLowerCase().trim() === "san francisco, ca"){
       $(".containerSanFrancisco").show();
-      }
+    }
     else if($("#cityInput").val().toLowerCase().trim() === "denver, co"){
       $(".containerDenver").show();
-      }
+    }
     else if($("#cityInput").val().toLowerCase().trim() === "boston, ma"){
       $(".containerBoston").show();
-      }
+    }
     else{
-      $(".alert-danger").slideDown();
+      $(".noCityAlert").slideDown();
       return;
     }
   })

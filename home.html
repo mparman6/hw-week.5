@@ -84,11 +84,17 @@
           </div>
           <div class="panel-body">
             <p>City:<input class="searchInput" id="cityInput" /><br></p>
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger noCityAlert" role="alert">
               Please enter a valid City.
             </div>
             <p>Check In Date:<input class="searchInput" id="checkInInput" /><br></p>
             <p>Check Out Date:<input class="searchInput" id="checkOutInput" /><br></p>
+            <div class="alert alert-danger noCheckInAlert" role="alert">
+              Please enter a check in date.
+            </div>
+            <div class="alert alert-danger noCheckOutAlert" role="alert">
+              Please enter a check out date.
+            </div>
             <button class="btn btn-primary searchBtn">Search</button>
           </div>
         </div>
