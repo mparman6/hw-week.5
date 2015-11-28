@@ -1,6 +1,6 @@
 .panelColumn{
   position: fixed;
-  top: 50px;
+  top: 150px;
   left: 50px;
   z-index: 100;
 }
