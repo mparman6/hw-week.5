@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $(".searchPanel").hide();
   $(".searchResultsContainer").hide();
+  $(".alert-danger").hide();
   $("#checkInInput").pickadate()
   $("#checkOutInput").pickadate()
   $(".carouselCity").on("click", function(){
@@ -11,7 +12,7 @@ $(document).ready(function(){
       $("#cityInput").val("New York City, NY")
     }
     else if (cityId === "sanFrancisco"){
-      $("#cityInput").val("San Francsico, CA")
+      $("#cityInput").val("San Francisco, CA")
     }
     else if (cityId === "denver"){
       $("#cityInput").val("Denver, CO")
@@ -21,6 +22,39 @@ $(document).ready(function(){
     }
   });
   $(".searchBtn").on("click", function(){
-    $(".searchResultsContainer").show();
+    console.log($("#checkInInput").val());
+    console.log($("#checkOutInput").val());
+    $(".alert-danger").hide();
+    $(".containerNewYorkCity").hide();
+    $(".containerSanFrancisco").hide();
+    $(".containerDenver").hide();
+    $(".containerBoston").hide();
+    var checkInDate = $("#checkInInput").val();
+    var checkOutDate = $("#checkOutInput").val();
+    var city = $("#cityInput").val().toLowerCase().trim();
+    if(checkInDate === "" && checkOutDate === ""){
+      $(".noCheckInOrOutAlert").slideDown();
+    }
+    else if(checkInDate === ""){
+      $(".noCheckInAlert").slideDown();
+    }
+    else if(checkOutDate === ""){
+      $(".noCheckOutAlert").slideDown();
+    }
+    else if(city === "new york city, ny" || "nyc" || "new york" || "new york city"){
+      $(".containerNewYorkCity").show();
+    }
+    else if(city === "san francisco, ca" || "san francisco"){
+      $(".containerSanFrancisco").show();
+    }
+    else if(city === "denver, co" || "denver"){
+      $(".containerDenver").show();
+    }
+    else if(city === "boston, ma" || "boston"){
+      $(".containerBoston").show();
+    }
+    else{
+      $(".noCityAlert").slideDown();
+    }
   })
 });
