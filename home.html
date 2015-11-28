@@ -20,7 +20,8 @@
       <h1 id="heading">NOMAD TRAVEL</h1>
     </div>
   </div>
-</nav> <!-- End of navbar -->
+  </nav> <!-- End of navbar -->
+  <!--Carousel-->
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="col-md-8 col-md-offset-2">
@@ -83,6 +84,9 @@
           </div>
           <div class="panel-body">
             <p>City:<input class="searchInput" id="cityInput" /><br></p>
+            <div class="alert alert-danger" role="alert">
+              Please enter a valid City.
+            </div>
             <p>Check In Date:<input class="searchInput" id="checkInInput" /><br></p>
             <p>Check Out Date:<input class="searchInput" id="checkOutInput" /><br></p>
             <button class="btn btn-primary searchBtn">Search</button>
@@ -92,7 +96,7 @@
     </div>
   </div>
   <!--New York Results-->
-  <div class="container-fluid searchResultsContainer">
+  <div class="container-fluid searchResultsContainer containerNewYorkCity">
     <div class="row-fluid">
       <div class="col-md-8 col-md-offset-4">
         <div class="panel panel-info searchResultsPanel">
@@ -113,7 +117,7 @@
     </div>
     <div class="row-fluid">
       <div class="col-md-8 col-md-offset-4">
-        <div class="panel panel-info searchResultsPanel nyc">
+        <div class="panel panel-info searchResultsPanel">
           <div class="panel-heading">
             <h3 class="panel-title">Ramada</h3>
           </div>
@@ -130,7 +134,7 @@
     </div>
     <div class="row-fluid">
       <div class="col-md-8 col-md-offset-4">
-        <div class="panel panel-info searchResultsPanel nyc">
+        <div class="panel panel-info searchResultsPanel">
           <div class="panel-heading">
             <h3 class="panel-title">Marriot</h3>
           </div>
@@ -146,7 +150,7 @@
     </div>
     <div class="row-fluid">
       <div class="col-md-8 col-md-offset-4">
-        <div class="panel panel-info searchResultsPanel nyc">
+        <div class="panel panel-info searchResultsPanel">
           <div class="panel-heading">
             <h3 class="panel-title">Super 8</h3>
           </div>
@@ -159,10 +163,12 @@
         </div>
       </div>
     </div>
+  </div>
     <!--San Francisco Results-->
+  <div class="container-fluid searchResultsContainer containerSanFrancisco">
     <div class="row-fluid">
       <div class="col-md-8 col-md-offset-4">
-        <div class="panel panel-info searchResultsPanel sanFrancisco">
+        <div class="panel panel-info searchResultsPanel">
           <div class="panel-heading">
             <h3 class="panel-title">Hilton</h3>
           </div>
@@ -180,7 +186,7 @@
     </div>
     <div class="row-fluid">
       <div class="col-md-8 col-md-offset-4">
-        <div class="panel panel-info searchResultsPanel sanFrancisco">
+        <div class="panel panel-info searchResultsPanel">
           <div class="panel-heading">
             <h3 class="panel-title">Ramada</h3>
           </div>
@@ -197,7 +203,7 @@
     </div>
     <div class="row-fluid">
       <div class="col-md-8 col-md-offset-4">
-        <div class="panel panel-info searchResultsPanel sanFrancisco">
+        <div class="panel panel-info searchResultsPanel">
           <div class="panel-heading">
             <h3 class="panel-title">Marriot</h3>
           </div>
@@ -213,12 +219,150 @@
     </div>
     <div class="row-fluid">
       <div class="col-md-8 col-md-offset-4">
-        <div class="panel panel-info searchResultsPanel sanFrancisco">
+        <div class="panel panel-info searchResultsPanel">
           <div class="panel-heading">
             <h3 class="panel-title">Super 8</h3>
           </div>
           <div class="panel-body">
             <p>Address: 415 O'Farrell St, San Francisco, CA 94102<br>Phone Number: (415)-555-4823<br>$100/Night<br>Amenities:<br></p>
+            <ul>
+              <li>Free Breakfast</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Denver Results-->
+  <div class="container-fluid searchResultsContainer containerDenver">
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-4">
+        <div class="panel panel-info searchResultsPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Hilton</h3>
+          </div>
+          <div class="panel-body">
+            <p>Address: 1400 Welton St, Denver, CO 80202<br>Phone Number: (303)-555-2189<br>$220/Night<br>Amenities:<br></p>
+            <ul>
+              <li>Wifi</li>
+              <li>Free Breakfast</li>
+              <li>Pool</li>
+              <li>Exercise Room</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-4">
+        <div class="panel panel-info searchResultsPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Ramada</h3>
+          </div>
+          <div class="panel-body">
+            <p>Address: 1150 E Colfax Ave, Denver, CO 80218<br>Phone Number: (303)-555-2121<br>$230/Night<br>Amenities:<br></p>
+            <ul>
+              <li>Wifi</li>
+              <li>Free Breakfast</li>
+              <li>Exercise Room</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-4">
+        <div class="panel panel-info searchResultsPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Marriot</h3>
+          </div>
+          <div class="panel-body">
+            <p>Address: 1701 California St, Denver, CO 80202<br>Phone Number: (303)-555-4318<br>$150/NightAmenities:<br></p>
+            <ul>
+              <li>Wifi</li>
+              <li>Pool</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-4">
+        <div class="panel panel-info searchResultsPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Super 8</h3>
+          </div>
+          <div class="panel-body">
+            <p>Address: 2601 Zuni St, Denver, CO 80211<br>Phone Number: (303)-555-3490<br>$100/Night<br>Amenities:<br></p>
+            <ul>
+              <li>Free Breakfast</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Boston Results-->
+  <div class="container-fluid searchResultsContainer containerBoston">
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-4">
+        <div class="panel panel-info searchResultsPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Hilton</h3>
+          </div>
+          <div class="panel-body">
+            <p>Address: 89 Broad St, Boston, MA 02110<br>Phone Number: (617)-555-3475<br>$270/Night<br>Amenities:<br></p>
+            <ul>
+              <li>Wifi</li>
+              <li>Free Breakfast</li>
+              <li>Pool</li>
+              <li>Exercise Room</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-4">
+        <div class="panel panel-info searchResultsPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Ramada</h3>
+          </div>
+          <div class="panel-body">
+            <p>Address: 800 William T Morrissey Blvd, Boston, MA 02122<br>Phone Number: (617)-555-4311<br>$230/Night<br>Amenities:<br></p>
+            <ul>
+              <li>Wifi</li>
+              <li>Free Breakfast</li>
+              <li>Exercise Room</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-4">
+        <div class="panel panel-info searchResultsPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Marriot</h3>
+          </div>
+          <div class="panel-body">
+            <p>Address: 296 State St, Boston, MA 02109<br>Phone Number: (617)-555-2742<br>$150/NightAmenities:<br></p>
+            <ul>
+              <li>Wifi</li>
+              <li>Pool</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-4">
+        <div class="panel panel-info searchResultsPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Super 8</h3>
+          </div>
+          <div class="panel-body">
+            <p>Address: 100 N Beacon St, Watertown, MA 02472<br>Phone Number: (617)-555-4323<br>$100/Night<br>Amenities:<br></p>
             <ul>
               <li>Free Breakfast</li>
             </ul>
