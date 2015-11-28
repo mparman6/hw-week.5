@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $(".searchPanel").hide();
+  $(".searchResultsContainer").hide();
   $(".carouselCity").on("click", function(){
     $(this).parent().parent().parent().hide();
     $(".searchPanel").show();
@@ -17,4 +18,7 @@ $(document).ready(function(){
       $("#cityInput").val("Boston, MA")
     }
   });
+  $(".searchBtn").on("click", function(){
+    $(".searchResultsContainer").show();
+  })
 });
