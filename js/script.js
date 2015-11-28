@@ -55,7 +55,6 @@ $(document).ready(function(){
     }
     else{
       $(".noCityAlert").slideDown();
-      return;
     }
   })
 });
