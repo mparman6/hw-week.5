@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(".searchPanel").hide();
   $(".carouselCity").on("click", function(){
-    $(this).parent().parent().hide();
+    $(this).parent().parent().parent().hide();
     $(".searchPanel").show();
     var cityId = $(this).attr("id")
     if(cityId === "newYorkCity"){
