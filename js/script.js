@@ -22,25 +22,39 @@ $(document).ready(function(){
     }
   });
   $(".searchBtn").on("click", function(){
+    console.log($("#checkInInput").val());
+    console.log($("#checkOutInput").val());
     $(".alert-danger").hide();
     $(".containerNewYorkCity").hide();
     $(".containerSanFrancisco").hide();
     $(".containerDenver").hide();
     $(".containerBoston").hide();
-    if($("#cityInput").val().toLowerCase().trim() === "new york city, ny"){
+    var checkInDate = $("#checkInInput").val();
+    var checkOutDate = $("#checkOutInput").val();
+    var city = $("#cityInput").val().toLowerCase().trim();
+    if(checkInDate === "" && checkOutDate === ""){
+      $(".noCheckInOrOutAlert").slideDown();
+    }
+    else if(checkInDate === ""){
+      $(".noCheckInAlert").slideDown();
+    }
+    else if(checkOutDate === ""){
+      $(".noCheckOutAlert").slideDown();
+    }
+    else if(city === "new york city, ny"){
       $(".containerNewYorkCity").show();
-      }
-    else if($("#cityInput").val().toLowerCase().trim() === "san francisco, ca"){
+    }
+    else if(city === "san francisco, ca"){
       $(".containerSanFrancisco").show();
-      }
-    else if($("#cityInput").val().toLowerCase().trim() === "denver, co"){
+    }
+    else if(city === "denver, co"){
       $(".containerDenver").show();
-      }
-    else if($("#cityInput").val().toLowerCase().trim() === "boston, ma"){
+    }
+    else if(city === "boston, ma"){
       $(".containerBoston").show();
-      }
+    }
     else{
-      $(".alert-danger").slideDown();
+      $(".noCityAlert").slideDown();
       return;
     }
   })
