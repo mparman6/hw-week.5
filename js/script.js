@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $(".searchPanel").hide();
   $(".searchResultsContainer").hide();
+  $(".alert-danger").hide();
   $("#checkInInput").pickadate()
   $("#checkOutInput").pickadate()
   $(".carouselCity").on("click", function(){
@@ -11,7 +12,7 @@ $(document).ready(function(){
       $("#cityInput").val("New York City, NY")
     }
     else if (cityId === "sanFrancisco"){
-      $("#cityInput").val("San Francsico, CA")
+      $("#cityInput").val("San Francisco, CA")
     }
     else if (cityId === "denver"){
       $("#cityInput").val("Denver, CO")
@@ -21,6 +22,26 @@ $(document).ready(function(){
     }
   });
   $(".searchBtn").on("click", function(){
-    $(".searchResultsContainer").show();
+    $(".alert-danger").hide();
+    $(".containerNewYorkCity").hide();
+    $(".containerSanFrancisco").hide();
+    $(".containerDenver").hide();
+    $(".containerBoston").hide();
+    if($("#cityInput").val().toLowerCase().trim() === "new york city, ny"){
+      $(".containerNewYorkCity").show();
+      }
+    else if($("#cityInput").val().toLowerCase().trim() === "san francisco, ca"){
+      $(".containerSanFrancisco").show();
+      }
+    else if($("#cityInput").val().toLowerCase().trim() === "denver, co"){
+      $(".containerDenver").show();
+      }
+    else if($("#cityInput").val().toLowerCase().trim() === "boston, ma"){
+      $(".containerBoston").show();
+      }
+    else{
+      $(".alert-danger").slideDown();
+      return;
+    }
   })
 });
