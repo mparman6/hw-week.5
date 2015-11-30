@@ -56,5 +56,8 @@ $(document).ready(function(){
     else{
       $(".noCityAlert").slideDown();
     }
+    $(".hideListing").on("click", function(){
+      $(this).parent().parent().parent().parent().parent().parent().parent().fadeOut("slow");
+    })
   })
 });
