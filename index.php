@@ -1,1 +1,1 @@
-<?php require 'main.html' ;?>
+<?php require 'home.html' ;?>
