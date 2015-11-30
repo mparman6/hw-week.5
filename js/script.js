@@ -60,4 +60,16 @@ $(document).ready(function(){
       $(this).parent().parent().parent().parent().parent().parent().parent().fadeOut("slow");
     })
   })
+  $(".wifi").on("click", function(){
+    $(".noWifi").fadeOut("slow")
+  })
+  $(".pool").on("click", function(){
+    $(".noPool").fadeOut("slow")
+  })
+  $(".exerciseRoom").on("click", function(){
+    $(".noExerciseRoom").fadeOut("slow")
+  })
+  $(".breakfast").on("click", function(){
+    $(".noBreakfast").fadeOut("slow")
+  })
 });
