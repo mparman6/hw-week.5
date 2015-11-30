@@ -61,15 +61,43 @@ $(document).ready(function(){
     })
   })
   $(".wifi").on("click", function(){
-    $(".noWifi").fadeOut("slow")
+    if($(this).attr("data-state") ==="unchecked"){
+    $(".noWifi").fadeOut("slow");
+    $(this).attr("data-state", "checked");
+    }
+  else{
+    $(this).attr("data-state", "unchecked");
+    $(".noWifi").fadeIn("slow");
+    }
   })
   $(".pool").on("click", function(){
-    $(".noPool").fadeOut("slow")
+    if($(this).attr("data-state") ==="unchecked"){
+    $(".noPool").fadeOut("slow");
+    $(this).attr("data-state", "checked");
+    }
+  else{
+    $(this).attr("data-state", "unchecked");
+    $(".noPool").fadeIn("slow");
+    }
   })
   $(".exerciseRoom").on("click", function(){
-    $(".noExerciseRoom").fadeOut("slow")
+    if($(this).attr("data-state") ==="unchecked"){
+    $(".noExerciseRoom").fadeOut("slow");
+    $(this).attr("data-state", "checked");
+    }
+  else{
+    $(this).attr("data-state", "unchecked");
+    $(".noExerciseRoom").fadeIn("slow");
+    }
   })
   $(".breakfast").on("click", function(){
-    $(".noBreakfast").fadeOut("slow")
+    if($(this).attr("data-state") ==="unchecked"){
+    $(".noBreakfast").fadeOut("slow");
+    $(this).attr("data-state", "checked");
+    }
+  else{
+    $(this).attr("data-state", "unchecked");
+    $(".noBreakfast").fadeIn("slow");
+    }
   })
 });
